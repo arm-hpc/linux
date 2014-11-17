@@ -237,6 +237,11 @@ static int hdlcd_get_dmabuf_ioctl(struct fb_info *info, unsigned int cmd,
 	if (copy_to_user(argp, &ebuf, sizeof(ebuf)))
 		goto err_export_fd;
 
+	/* We keep this reference and re-use it later, so we grab another reference when handing it over
+	 * to dma_buf which will release its reference when done with it.
+	 */
+	drm_gem_object_reference(&hdlcd->bo->gem);
+
 	return 0;
 
 err_export_fd:
