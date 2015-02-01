@@ -1,6 +1,6 @@
 dtb-$(CONFIG_ARCH_VEXPRESS) += rtsm_ve-aemv8a.dtb foundation-v8.dtb
 dtb-$(CONFIG_ARCH_XGENE) += apm-mustang.dtb
-dtb-y += juno.dtb
+dtb-y += juno.dtb juno_gem5.dtb
 
 targets += dtbs
 targets += $(dtb-y)
