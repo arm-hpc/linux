@@ -58,22 +58,13 @@
                 #address-cells = <1>;
                 #size-cells = <0>;
 
-                /*core4: core@0 {
+                core4: core@0 {
                     reg = <4>;
                 };
 
                 core5: core@1 {
                     reg = <5>;
                 };
-
-                core6: core@2 {
-                    reg = <6>;
-                };
-
-                core7: core@3 {
-                    reg = <7>;
-                };*/
-
             };
         };
     };
@@ -122,7 +113,7 @@
             cpu-release-addr = <0x0 0x8000fff8>;
             clock-frequency = <1000000000>;
         };
-        /*cpu@4 {
+        cpu@4 {
             device_type = "cpu";
             compatible = "arm,cortex-a57";
             cluster = <&cluster1>;
@@ -142,26 +133,6 @@
             cpu-release-addr = <0x0 0x8000fff8>;
             clock-frequency = <1000000000>;
         };
-        cpu@6 {
-            device_type = "cpu";
-            compatible = "arm,cortex-a57";
-            cluster = <&cluster1>;
-            core = <&core6>;
-            reg = <0x106>;
-            enable-method = "spin-table";
-            cpu-release-addr = <0x0 0x8000fff8>;
-            clock-frequency = <1000000000>;
-        };
-        cpu@7 {
-            device_type = "cpu";
-            compatible = "arm,cortex-a57";
-            cluster = <&cluster1>;
-            core = <&core7>;
-            reg = <0x107>;
-            enable-method = "spin-table";
-            cpu-release-addr = <0x0 0x8000fff8>;
-            clock-frequency = <1000000000>;
-        };*/
     };	
 
     memory@80000000 {
